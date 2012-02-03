@@ -1,0 +1,81 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASM_SRCS	Debug/sources.mk	/^ASM_SRCS := $/;"	m
+AttrNode	tag_tree_struct.h	/^}AttrNode;$/;"	t	typeref:struct:attrnode
+CC_DEPS	Debug/sources.mk	/^CC_DEPS := $/;"	m
+CC_SRCS	Debug/sources.mk	/^CC_SRCS := $/;"	m
+CPP_DEPS	Debug/sources.mk	/^CPP_DEPS := $/;"	m
+CPP_SRCS	Debug/sources.mk	/^CPP_SRCS := $/;"	m
+CXX_DEPS	Debug/sources.mk	/^CXX_DEPS := $/;"	m
+CXX_SRCS	Debug/sources.mk	/^CXX_SRCS := $/;"	m
+C_DEPS	Debug/sources.mk	/^C_DEPS := $/;"	m
+C_SRCS	Debug/sources.mk	/^C_SRCS := $/;"	m
+C_UPPER_DEPS	Debug/sources.mk	/^C_UPPER_DEPS := $/;"	m
+C_UPPER_SRCS	Debug/sources.mk	/^C_UPPER_SRCS := $/;"	m
+EXECUTABLES	Debug/sources.mk	/^EXECUTABLES := $/;"	m
+LIBS	Debug/objects.mk	/^LIBS :=$/;"	m
+OBJS	Debug/sources.mk	/^OBJS := $/;"	m
+OBJ_SRCS	Debug/sources.mk	/^OBJ_SRCS := $/;"	m
+O_SRCS	Debug/sources.mk	/^O_SRCS := $/;"	m
+RM	Debug/makefile	/^RM := rm -rf$/;"	m
+STACK_INIT_SIZE	tag_tree_struct.h	/^const int STACK_INIT_SIZE = 100;$/;"	v
+STACK_PER_ADD	tag_tree_struct.h	/^const int STACK_PER_ADD = 20;$/;"	v
+SUBDIRS	Debug/sources.mk	/^SUBDIRS := \\$/;"	m
+S_UPPER_SRCS	Debug/sources.mk	/^S_UPPER_SRCS := $/;"	m
+SourceScope	xml_tree.h	/^}SourceScope;$/;"	t	typeref:enum:__anon1
+Stack	tag_tree_struct.h	/^    Stack()$/;"	f	class:Stack
+Stack	tag_tree_struct.h	/^template <class Type> class Stack{$/;"	c
+TAGE	xml_tree.h	/^    TAGE,   \/\/标签块结束$/;"	e	enum:__anon1
+TAGS	xml_tree.h	/^    TAGS,   \/\/标签块开始$/;"	e	enum:__anon1
+TAG_TREE_STRUCT	main.cpp	6;"	d	file:
+TAG_TREE_STRUCT	tag_tree_struct.h	11;"	d
+TAG_TREE_STRUCT	xml_tree.h	12;"	d
+TEXT	xml_tree.h	/^    TEXT    \/\/文本块$/;"	e	enum:__anon1
+TagNode	tag_tree_struct.h	/^}TagNode;$/;"	t	typeref:struct:tagnode
+Tag_Tree	xml_tree.h	/^    Tag_Tree()$/;"	f	class:Tag_Tree
+Tag_Tree	xml_tree.h	/^class Tag_Tree{$/;"	c
+TextNode	tag_tree_struct.h	/^}TextNode;$/;"	t	typeref:struct:text
+USER_OBJS	Debug/objects.mk	/^USER_OBJS :=$/;"	m
+XML_TREE	main.cpp	11;"	d	file:
+XML_TREE	xml_tree.h	8;"	d
+__append_attr	xml_tree.h	/^    void inline __append_attr(TagNode *fa,string name,string value)$/;"	f	class:Tag_Tree
+__tag_start	xml_tree.h	/^    void inline __tag_start(string::size_type tg,TagNode &tag)$/;"	f	class:Tag_Tree
+append_attr	xml_tree.h	/^    void append_attr(TagNode *tag,AttrNode *attr)$/;"	f	class:Tag_Tree
+append_child	xml_tree.h	/^    void append_child(TagNode *fa, TagNode *child)$/;"	f	class:Tag_Tree
+attr	tag_tree_struct.h	/^    AttrNode *attr;         \/\/第一个attr属性值$/;"	m	struct:tagnode
+attr_stack	xml_tree.h	/^    Stack<AttrNode>attr_stack;$/;"	m	class:Tag_Tree
+attrnode	tag_tree_struct.h	/^typedef struct attrnode{$/;"	s
+content	tag_tree_struct.h	/^    string content;$/;"	m	struct:text
+data	tag_tree_struct.h	/^    Type *data;$/;"	m	class:Stack
+debug	tag_tree_struct.h	/^    void debug()$/;"	f	class:Stack
+folow	tag_tree_struct.h	/^    TextNode *folow;        \/\/紧接本tag其后的text$/;"	m	struct:tagnode
+gtop	tag_tree_struct.h	/^    bool gtop(Type* &x)$/;"	f	class:Stack
+init	xml_tree.h	/^    void init(string *source)$/;"	f	class:Tag_Tree
+isempty	tag_tree_struct.h	/^    bool isempty()$/;"	f	class:Stack
+left	tag_tree_struct.h	/^    struct tagnode *left;   \/\/左侧代表孩子$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
+main	main.cpp	/^int main()$/;"	f
+name	tag_tree_struct.h	/^    string name;             \/\/名称$/;"	m	struct:tagnode
+name	tag_tree_struct.h	/^    string name;$/;"	m	struct:attrnode
+next	tag_tree_struct.h	/^    struct attrnode *next;  \/\/作为属性链表$/;"	m	struct:attrnode	typeref:struct:attrnode::attrnode
+pop	tag_tree_struct.h	/^    bool pop(Type *&x)$/;"	f	class:Stack
+pre	tag_tree_struct.h	/^    TextNode *pre;          \/\/tag内 在第一个子标签前的text$/;"	m	struct:tagnode
+push	tag_tree_struct.h	/^    void push(Type *x)$/;"	f	class:Stack
+right	tag_tree_struct.h	/^    struct tagnode *right;  \/\/右侧代码兄弟$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
+root	xml_tree.h	/^    TagNode *root;$/;"	m	class:Tag_Tree
+scan_scape	xml_tree.h	/^    SourceScope scan_scape(string::size_type start,string::size_type &end,string *&data)$/;"	f	class:Tag_Tree
+scan_trans_tree	xml_tree.h	/^    void scan_trans_tree()$/;"	f	class:Tag_Tree
+source	xml_tree.h	/^    string *source;$/;"	m	class:Tag_Tree
+space	tag_tree_struct.h	/^    int space;$/;"	m	class:Stack
+tagnode	tag_tree_struct.h	/^typedef struct tagnode{$/;"	s
+text	tag_tree_struct.h	/^typedef struct text{$/;"	s
+tg_stack	xml_tree.h	/^    Stack<TagNode> tg_stack;$/;"	m	class:Tag_Tree
+top	tag_tree_struct.h	/^    int top;$/;"	m	class:Stack
+trans	xml_tree.h	/^bool *trans(string *s)$/;"	f
+trim	xml_tree.h	/^bool *trim(string *s)$/;"	f
+value	tag_tree_struct.h	/^    string value;            \/\/属性值$/;"	m	struct:attrnode
+~Stack	tag_tree_struct.h	/^    ~Stack()$/;"	f	class:Stack
+~Tag_Tree	xml_tree.h	/^    ~Tag_Tree()$/;"	f	class:Tag_Tree
