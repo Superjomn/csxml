@@ -106,6 +106,9 @@ TagTreeType split_tagtext(string &text,Tag &tag)
 //查找主程序
 TagTreeType Tree_Search::find(string &text)
 {
+    TagTreeType res;
+    vector<TagNode*>tags;
+
     TagNode* root=this->tag_tree.root;
     vector<string> tagtext;
     string::size_type s=0,e=0;
@@ -160,6 +163,31 @@ TagTreeType Tree_Search::find(string &text)
         //.class
         //#idname
         //div#id   div.class
+        //调用split_trans_attr()进行处理 将分割到的字符串进行处理
+        res=split_trans_attr(scope,tag);
+        //解析失败
+        if(!TagTreeError("split_trans_attr",res))
+            return false;
+        //解析成功 需要从一集合中判断是否满足
+        if(tag.attrtext.empty())
+        {
+            //不存在主标签 任意标签进行查找
+            tags=this->tg_stack;
+            //开始匹配 attrvalue
+            for(int j=0;j<tags.size();j++)
+            {
+                //不符合 则剔除
+                if(!match_attr(tags[j],tag.attrtext))
+                {
+                    tags.erase(j);
+                } 
+            } 
+        } 
+    }
+    if(tags.empty())
+    { 
+        console("tags is empty"); 
+        return false;
     }
 }
 

@@ -28,7 +28,10 @@ using namespace std;
 #define TAG_TREE_STRUCT_H_
 #include "tag_tree_struct.h"
 #endif
-
+//将单独的标签字符进行拆分
+//如 p#dir拆分为 tagname: p
+//               tagvalue:#dir
+//返回struct tag
 TagTreeType split_tagtext(string &text,Tag &tag);
 
 class Tree_Search{
@@ -53,6 +56,7 @@ public:
     //各种差错控制
     //查询主程序 负责对查取text作分析 调用适当的search程序
     TagTreeType find(string &text);
+    //一轮搜索
     //搜索主程序  在fa下搜索相应标签
     //根据标签名称进行查找
     TagTreeType search(TagNode *fnode,string &tgname,vector<TagNode*> &tags);
