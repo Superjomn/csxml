@@ -4,7 +4,7 @@ using namespace std;
 
 #ifndef TYPE_H_
 #define TYPE_H_ 
-#include "type.h"
+#include "./type.h"
 #endif
 
 void func(const string &fun) 

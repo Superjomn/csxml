@@ -1,3 +1,3 @@
-type.d: ../type.cpp ../type.h
+type.d: ../type.cpp .././type.h
 
-../type.h:
+.././type.h:

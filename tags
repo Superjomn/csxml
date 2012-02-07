@@ -5,7 +5,8 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ASM_SRCS	Debug/sources.mk	/^ASM_SRCS := $/;"	m
-AttrNode	tag_tree_struct.h	/^}AttrNode;$/;"	t	typeref:struct:attrnode
+Attr	type.h	/^}Attr;$/;"	t	typeref:struct:__anon1
+AttrNode	type.h	/^}AttrNode;$/;"	t	typeref:struct:attrnode
 CC_DEPS	Debug/sources.mk	/^CC_DEPS := $/;"	m
 CC_SRCS	Debug/sources.mk	/^CC_SRCS := $/;"	m
 CPP_DEPS	Debug/sources.mk	/^CPP_DEPS := $/;"	m
@@ -16,66 +17,146 @@ C_DEPS	Debug/sources.mk	/^C_DEPS := $/;"	m
 C_SRCS	Debug/sources.mk	/^C_SRCS := $/;"	m
 C_UPPER_DEPS	Debug/sources.mk	/^C_UPPER_DEPS := $/;"	m
 C_UPPER_SRCS	Debug/sources.mk	/^C_UPPER_SRCS := $/;"	m
+ERROE_TAG_END_STACK_NO_MATCH	type.h	/^    ERROE_TAG_END_STACK_NO_MATCH,       \/\/栈顶不匹配$/;"	e	enum:__anon3
+ERROR_DIV_0	type.h	/^    ERROR_DIV_0,                        \/\/除数为0$/;"	e	enum:__anon3
+ERROR_TAG_EMPTY_TAG	type.h	/^    ERROR_TAG_EMPTY_TAG,                \/\/空标签<> $/;"	e	enum:__anon3
+ERROR_TAG_EMPTY_TEXT	type.h	/^    ERROR_TAG_EMPTY_TEXT,               \/\/传入空字符$/;"	e	enum:__anon3
+ERROR_TAG_END_STACK_EMPTY	type.h	/^    ERROR_TAG_END_STACK_EMPTY,          \/\/栈空$/;"	e	enum:__anon3
+ERROR_TAG_NOT_TRIM	type.h	/^    ERROR_TAG_NOT_TRIM,                 \/\/文本两侧空格未去除$/;"	e	enum:__anon3
+ERROR_TAG_NO_A_TAG_WORD	type.h	/^    ERROR_TAG_NO_A_TAG_WORD,                \/\/解析不存在有效文本$/;"	e	enum:__anon3
+ERROR_TAG_NO_RIGHT_RIGHT_REC_BRACKET	type.h	/^    ERROR_TAG_NO_RIGHT_RIGHT_REC_BRACKET,   \/\/解析无右侧括号$/;"	e	enum:__anon3
+ERROR_TAG_ONLY_ATTRNAME	type.h	/^    ERROR_TAG_ONLY_ATTRNAME,            \/\/只存在attrname 无=$/;"	e	enum:__anon3
+ERROR_TAG_SCAN_SCAPE_NO_FULL_TAG	type.h	/^    ERROR_TAG_SCAN_SCAPE_NO_FULL_TAG,   \/\/标签不完整$/;"	e	enum:__anon3
+ERROR_TAG_STR_NOT_EVEN	type.h	/^    ERROR_TAG_STR_NOT_EVEN              \/\/数组内元素个数为奇数$/;"	e	enum:__anon3
+ERROR_TAG_WRONG_SYNTAX	type.h	/^    ERROR_TAG_WRONG_SYNTAX,             \/\/语法错误$/;"	e	enum:__anon3
 EXECUTABLES	Debug/sources.mk	/^EXECUTABLES := $/;"	m
 LIBS	Debug/objects.mk	/^LIBS :=$/;"	m
+NONE	type.h	/^    NONE,   \/\/无效$/;"	e	enum:__anon3
 OBJS	Debug/sources.mk	/^OBJS := $/;"	m
 OBJ_SRCS	Debug/sources.mk	/^OBJ_SRCS := $/;"	m
 O_SRCS	Debug/sources.mk	/^O_SRCS := $/;"	m
+RIGHT	type.h	/^    RIGHT,                              \/\/正确$/;"	e	enum:__anon3
 RM	Debug/makefile	/^RM := rm -rf$/;"	m
-STACK_INIT_SIZE	tag_tree_struct.h	/^const int STACK_INIT_SIZE = 100;$/;"	v
-STACK_PER_ADD	tag_tree_struct.h	/^const int STACK_PER_ADD = 20;$/;"	v
+Register_Arr	tree_struct/tag_tree_struct.h	/^template <class Type> class Register_Arr{$/;"	c
+S	tools/str.h	24;"	d
+SPACE	tools/str.h	22;"	d
+STACK_INIT_SIZE	tree_struct/tag_tree_struct.h	/^const int STACK_INIT_SIZE = 100;$/;"	v
+STACK_PER_ADD	tree_struct/tag_tree_struct.h	/^const int STACK_PER_ADD = 20;$/;"	v
+STR_H_	tools/str.h	14;"	d
+STR_H_	tree_struct/tag_tree_struct.h	24;"	d
+STR_H_	tree_struct/xml_tree.h	22;"	d
 SUBDIRS	Debug/sources.mk	/^SUBDIRS := \\$/;"	m
 S_UPPER_SRCS	Debug/sources.mk	/^S_UPPER_SRCS := $/;"	m
-SourceScope	xml_tree.h	/^}SourceScope;$/;"	t	typeref:enum:__anon1
-Stack	tag_tree_struct.h	/^    Stack()$/;"	f	class:Stack
-Stack	tag_tree_struct.h	/^template <class Type> class Stack{$/;"	c
-TAGE	xml_tree.h	/^    TAGE,   \/\/标签块结束$/;"	e	enum:__anon1
-TAGS	xml_tree.h	/^    TAGS,   \/\/标签块开始$/;"	e	enum:__anon1
-TAG_TREE_STRUCT	main.cpp	6;"	d	file:
-TAG_TREE_STRUCT	tag_tree_struct.h	11;"	d
-TAG_TREE_STRUCT	xml_tree.h	12;"	d
-TEXT	xml_tree.h	/^    TEXT    \/\/文本块$/;"	e	enum:__anon1
-TagNode	tag_tree_struct.h	/^}TagNode;$/;"	t	typeref:struct:tagnode
-Tag_Tree	xml_tree.h	/^    Tag_Tree()$/;"	f	class:Tag_Tree
-Tag_Tree	xml_tree.h	/^class Tag_Tree{$/;"	c
-TextNode	tag_tree_struct.h	/^}TextNode;$/;"	t	typeref:struct:text
+Stack	tree_struct/tag_tree_struct.h	/^    Stack()$/;"	f	class:Stack
+Stack	tree_struct/tag_tree_struct.h	/^template <class Type> class Stack{$/;"	c
+TAGE	type.h	/^    TAGE,   \/\/标签块结束$/;"	e	enum:__anon3
+TAGS	type.h	/^    TAGS,   \/\/标签块开始$/;"	e	enum:__anon3
+TAG_TREE_STRUCT_H_	tree_search/tree_search.h	28;"	d
+TAG_TREE_STRUCT_H_	tree_struct/tag_tree_struct.h	15;"	d
+TAG_TREE_STRUCT_H_	tree_struct/xml_tree.h	27;"	d
+TEXT	type.h	/^    TEXT,   \/\/文本块$/;"	e	enum:__anon3
+TREE_SEARCH_H_	tree_search/tree_search.cpp	13;"	d	file:
+TREE_SEARCH_H_	tree_search/tree_search.h	14;"	d
+TYPE_H_	tools/str.h	18;"	d
+TYPE_H_	tree_search/tree_search.h	23;"	d
+TYPE_H_	tree_struct/tag_tree_struct.h	19;"	d
+TYPE_H_	tree_struct/xml_tree.h	17;"	d
+TYPE_H_	type.cpp	6;"	d	file:
+TYPE_H_	type.h	6;"	d
+Tag	type.h	/^}Tag;$/;"	t	typeref:struct:__anon2
+TagNode	type.h	/^}TagNode;$/;"	t	typeref:struct:tagnode
+TagTreeError	type.cpp	/^bool TagTreeError(const string fun,const TagTreeType type)$/;"	f
+TagTreeType	type.h	/^}TagTreeType;$/;"	t	typeref:enum:__anon3
+Tag_Tree	tree_struct/xml_tree.cpp	/^Tag_Tree::Tag_Tree()$/;"	f	class:Tag_Tree
+Tag_Tree	tree_struct/xml_tree.h	/^class Tag_Tree{$/;"	c
+Tree_Search	tree_search/tree_search.h	/^class Tree_Search{$/;"	c
 USER_OBJS	Debug/objects.mk	/^USER_OBJS :=$/;"	m
-XML_TREE	main.cpp	11;"	d	file:
-XML_TREE	xml_tree.h	8;"	d
-__append_attr	xml_tree.h	/^    void inline __append_attr(TagNode *fa,string name,string value)$/;"	f	class:Tag_Tree
-__tag_start	xml_tree.h	/^    void inline __tag_start(string::size_type tg,TagNode &tag)$/;"	f	class:Tag_Tree
-append_attr	xml_tree.h	/^    void append_attr(TagNode *tag,AttrNode *attr)$/;"	f	class:Tag_Tree
-append_child	xml_tree.h	/^    void append_child(TagNode *fa, TagNode *child)$/;"	f	class:Tag_Tree
-attr	tag_tree_struct.h	/^    AttrNode *attr;         \/\/第一个attr属性值$/;"	m	struct:tagnode
-attr_stack	xml_tree.h	/^    Stack<AttrNode>attr_stack;$/;"	m	class:Tag_Tree
-attrnode	tag_tree_struct.h	/^typedef struct attrnode{$/;"	s
-content	tag_tree_struct.h	/^    string content;$/;"	m	struct:text
-data	tag_tree_struct.h	/^    Type *data;$/;"	m	class:Stack
-debug	tag_tree_struct.h	/^    void debug()$/;"	f	class:Stack
-folow	tag_tree_struct.h	/^    TextNode *folow;        \/\/紧接本tag其后的text$/;"	m	struct:tagnode
-gtop	tag_tree_struct.h	/^    bool gtop(Type* &x)$/;"	f	class:Stack
-init	xml_tree.h	/^    void init(string *source)$/;"	f	class:Tag_Tree
-isempty	tag_tree_struct.h	/^    bool isempty()$/;"	f	class:Stack
-left	tag_tree_struct.h	/^    struct tagnode *left;   \/\/左侧代表孩子$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
-main	main.cpp	/^int main()$/;"	f
-name	tag_tree_struct.h	/^    string name;             \/\/名称$/;"	m	struct:tagnode
-name	tag_tree_struct.h	/^    string name;$/;"	m	struct:attrnode
-next	tag_tree_struct.h	/^    struct attrnode *next;  \/\/作为属性链表$/;"	m	struct:attrnode	typeref:struct:attrnode::attrnode
-pop	tag_tree_struct.h	/^    bool pop(Type *&x)$/;"	f	class:Stack
-pre	tag_tree_struct.h	/^    TextNode *pre;          \/\/tag内 在第一个子标签前的text$/;"	m	struct:tagnode
-push	tag_tree_struct.h	/^    void push(Type *x)$/;"	f	class:Stack
-right	tag_tree_struct.h	/^    struct tagnode *right;  \/\/右侧代码兄弟$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
-root	xml_tree.h	/^    TagNode *root;$/;"	m	class:Tag_Tree
-scan_scape	xml_tree.h	/^    SourceScope scan_scape(string::size_type start,string::size_type &end,string *&data)$/;"	f	class:Tag_Tree
-scan_trans_tree	xml_tree.h	/^    void scan_trans_tree()$/;"	f	class:Tag_Tree
-source	xml_tree.h	/^    string *source;$/;"	m	class:Tag_Tree
-space	tag_tree_struct.h	/^    int space;$/;"	m	class:Stack
-tagnode	tag_tree_struct.h	/^typedef struct tagnode{$/;"	s
-text	tag_tree_struct.h	/^typedef struct text{$/;"	s
-tg_stack	xml_tree.h	/^    Stack<TagNode> tg_stack;$/;"	m	class:Tag_Tree
-top	tag_tree_struct.h	/^    int top;$/;"	m	class:Stack
-trans	xml_tree.h	/^bool *trans(string *s)$/;"	f
-trim	xml_tree.h	/^bool *trim(string *s)$/;"	f
-value	tag_tree_struct.h	/^    string value;            \/\/属性值$/;"	m	struct:attrnode
-~Stack	tag_tree_struct.h	/^    ~Stack()$/;"	f	class:Stack
-~Tag_Tree	xml_tree.h	/^    ~Tag_Tree()$/;"	f	class:Tag_Tree
+XML_TREE_H_	tree_search/tree_search.h	18;"	d
+XML_TREE_H_	tree_struct/xml_tree.h	13;"	d
+__append_attr	tree_struct/xml_tree.cpp	/^void inline  Tag_Tree::__append_attr(TagNode *fa,string name,string value)$/;"	f	class:Tag_Tree
+__has_attr	tree_search/tree_search.cpp	/^bool Tree_Search::__has_attr(TagNode *tag,string &attrname,string &value)$/;"	f	class:Tree_Search
+__tag_end	tree_struct/xml_tree.cpp	/^TagTreeType Tag_Tree::__tag_end(string &text)$/;"	f	class:Tag_Tree
+__tag_start	tree_struct/xml_tree.cpp	/^TagTreeType Tag_Tree::__tag_start(string &text ,TagNode &tag)$/;"	f	class:Tag_Tree
+add_attr	tree_struct/xml_tree.cpp	/^TagTreeType Tag_Tree::add_attr(TagNode *tag,string &text)$/;"	f	class:Tag_Tree
+append_child	tree_struct/xml_tree.cpp	/^void Tag_Tree::append_child(TagNode *fa, TagNode *child)$/;"	f	class:Tag_Tree
+arr	tree_struct/tag_tree_struct.h	/^    vector<Type>arr;$/;"	m	class:Register_Arr
+attr	type.h	/^    AttrNode *attr;         \/\/第一个attr属性值$/;"	m	struct:tagnode
+attr	type.h	/^    string attr;$/;"	m	struct:__anon1
+attrnode	type.h	/^typedef struct attrnode{$/;"	s
+attrs	tree_struct/xml_tree.h	/^    Register_Arr<AttrNode*> attrs;$/;"	m	class:Tag_Tree
+attrtext	type.h	/^    string attrtext;    \/\/attri的文本$/;"	m	struct:__anon2
+cStack	tree_struct/tag_tree_struct.h	/^    cStack()$/;"	f	class:cStack
+cStack	tree_struct/tag_tree_struct.h	/^template <class Type> class cStack{$/;"	c
+console	tools/str.h	27;"	d
+create_new_attrnode	tree_struct/xml_tree.cpp	/^AttrNode* Tag_Tree::create_new_attrnode()$/;"	f	class:Tag_Tree
+create_new_tagnode	tree_struct/xml_tree.cpp	/^TagNode* Tag_Tree::create_new_tagnode()$/;"	f	class:Tag_Tree
+data	tree_struct/tag_tree_struct.h	/^    Type **data;$/;"	m	class:cStack
+data	tree_struct/tag_tree_struct.h	/^    list<Type> data;$/;"	m	class:Stack
+debug	tree_struct/tag_tree_struct.h	/^    void debug()$/;"	f	class:cStack
+debug	tree_struct/xml_tree.cpp	/^void Tag_Tree::debug()$/;"	f	class:Tag_Tree
+error	type.cpp	/^void error(const string &er)$/;"	f
+find	tree_search/tree_search.cpp	/^TagTreeType Tree_Search::find(string &text)$/;"	f	class:Tree_Search
+folow	type.h	/^    string folow;        \/\/紧接本tag其后的text$/;"	m	struct:tagnode
+func	type.cpp	/^void func(const string &fun) $/;"	f
+get_word	tools/str.cpp	/^bool get_word(const string &text,const string::size_type s,string::size_type &e,string &word)$/;"	f
+gtop	tree_struct/tag_tree_struct.h	/^    bool gtop(Type &x)$/;"	f	class:Stack
+gtop	tree_struct/tag_tree_struct.h	/^    bool gtop(Type* &x)$/;"	f	class:cStack
+init	tree_struct/xml_tree.cpp	/^void Tag_Tree::init(string *source)$/;"	f	class:Tag_Tree
+is_completed	tree_struct/xml_tree.cpp	/^bool Tag_Tree::is_completed()$/;"	f	class:Tag_Tree
+is_even	tools/str.cpp	/^template <typename T> inline bool is_even(const T num)$/;"	f
+is_odd	tools/str.cpp	/^template <typename T> inline bool is_odd(const T num)$/;"	f
+is_odd	tree_struct/xml_tree.cpp	/^template <typename T> inline bool is_odd(const T num)$/;"	f
+isempty	tree_struct/tag_tree_struct.h	/^    bool isempty()$/;"	f	class:Stack
+isempty	tree_struct/tag_tree_struct.h	/^    bool isempty()$/;"	f	class:cStack
+left	type.h	/^    struct tagnode *left;   \/\/左侧代表孩子$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
+main	test.cpp	/^int main()$/;"	f
+match_attr	tree_search/tree_search.cpp	/^bool Tree_Search::match_attr(TagNode *tag,vector<string> &attrs)$/;"	f	class:Tree_Search
+max	tools/str.cpp	/^template <typename T> inline T max(const T a,const T b) $/;"	f
+min	tools/str.cpp	/^template <typename T> inline T min(const T a,const T b) $/;"	f
+name	type.h	/^    string name;             \/\/名称$/;"	m	struct:tagnode
+name	type.h	/^    string name;$/;"	m	struct:attrnode
+next	type.h	/^    struct attrnode *next;  \/\/作为属性链表$/;"	m	struct:attrnode	typeref:struct:attrnode::attrnode
+next_scope	tree_struct/xml_tree.cpp	/^TagTreeType Tag_Tree::next_scope(string::size_type start)$/;"	f	class:Tag_Tree
+next_word	tools/str.cpp	/^bool next_word(const string &text,const string::size_type s,string::size_type &e,string &word)$/;"	f
+pop	tree_struct/tag_tree_struct.h	/^    bool pop(Type &x)$/;"	f	class:Stack
+pop	tree_struct/tag_tree_struct.h	/^    bool pop(Type *&x)$/;"	f	class:cStack
+pre	type.h	/^    string pre;          \/\/tag内 在第一个子标签前的text$/;"	m	struct:tagnode
+print	tools/str.h	25;"	d
+push	tree_struct/tag_tree_struct.h	/^    void push(Type *x)$/;"	f	class:cStack
+push	tree_struct/tag_tree_struct.h	/^    void push(Type tg)$/;"	f	class:Register_Arr
+push	tree_struct/tag_tree_struct.h	/^    void push(Type x)$/;"	f	class:Stack
+right	type.h	/^    struct tagnode *right;  \/\/右侧代码兄弟$/;"	m	struct:tagnode	typeref:struct:tagnode::tagnode
+rm_mark	tools/str.cpp	/^void rm_mark(string &text)$/;"	f
+root	tree_struct/xml_tree.h	/^    TagNode *root;$/;"	m	class:Tag_Tree
+scan_scope	tree_struct/xml_tree.cpp	/^TagTreeType Tag_Tree::scan_scope(string::size_type step,string::size_type &end,string &data)$/;"	f	class:Tag_Tree
+scan_trans_tree	tree_struct/xml_tree.cpp	/^bool Tag_Tree::scan_trans_tree()$/;"	f	class:Tag_Tree
+search	tree_search/tree_search.cpp	/^TagTreeType Tree_Search::search(TagNode *fnode,string &tgname,string &attr_text,vector<TagNode*> &tags)$/;"	f	class:Tree_Search
+search	tree_search/tree_search.cpp	/^TagTreeType Tree_Search::search(TagNode *fnode,string &tgname,vector<TagNode*> &tags)$/;"	f	class:Tree_Search
+show_at	tree_struct/xml_tree.cpp	/^void show_at(int space,const AttrNode* at) $/;"	f
+show_attr	tree_struct/xml_tree.cpp	/^void show_attr(const TagNode* at) $/;"	f
+show_child	tree_struct/xml_tree.cpp	/^void show_child(const TagNode *tg)$/;"	f
+show_tg	tree_struct/xml_tree.cpp	/^void show_tg(int space,const TagNode* tg) $/;"	f
+size	tree_struct/tag_tree_struct.h	/^    int size()$/;"	f	class:Register_Arr
+size	tree_struct/tag_tree_struct.h	/^    int size()$/;"	f	class:Stack
+size_control	tree_struct/tag_tree_struct.h	/^    void size_control()$/;"	f	class:cStack
+source	tree_struct/xml_tree.h	/^    string *source;$/;"	m	class:Tag_Tree
+space	tree_struct/tag_tree_struct.h	/^    int space;$/;"	m	class:cStack
+split_tagtext	tree_search/tree_search.cpp	/^TagTreeType split_tagtext(string &text,Tag &tag)$/;"	f
+split_trans_attr	tools/str.cpp	/^TagTreeType split_trans_attr(string &text,vector<string> &attrs)$/;"	f
+step	tree_struct/xml_tree.h	/^    string::size_type step;$/;"	m	class:Tag_Tree
+tag_tree	tree_search/tree_search.h	/^    Tag_Tree tag_tree;$/;"	m	class:Tree_Search
+tagname	type.h	/^    string tagname;$/;"	m	struct:__anon2
+tagnode	type.h	/^typedef struct tagnode{$/;"	s
+tags	tree_struct/xml_tree.h	/^    Register_Arr<TagNode*> tags;$/;"	m	class:Tag_Tree
+tg_stack	tree_search/tree_search.h	/^    Stack<TagNode*> tg_stack;$/;"	m	class:Tree_Search
+tg_stack	tree_struct/xml_tree.h	/^    Stack<TagNode *> tg_stack;$/;"	m	class:Tag_Tree
+top	tree_struct/tag_tree_struct.h	/^    int top;$/;"	m	class:cStack
+trans	tools/str.cpp	/^bool trans(string &text)$/;"	f
+trim	tools/str.cpp	/^bool trim(string &s)$/;"	f
+upper	tree_struct/tag_tree_struct.h	/^template <typename T> inline TagTreeType upper(const T num,const T per,T &size)$/;"	f
+value	type.h	/^    string value;            \/\/属性值$/;"	m	struct:attrnode
+value	type.h	/^    string value;$/;"	m	struct:__anon1
+~Register_Arr	tree_struct/tag_tree_struct.h	/^    ~Register_Arr()$/;"	f	class:Register_Arr
+~Stack	tree_struct/tag_tree_struct.h	/^    ~Stack()$/;"	f	class:Stack
+~Tag_Tree	tree_struct/xml_tree.cpp	/^Tag_Tree::~Tag_Tree()$/;"	f	class:Tag_Tree
+~cStack	tree_struct/tag_tree_struct.h	/^    ~cStack()$/;"	f	class:cStack

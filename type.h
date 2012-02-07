@@ -56,6 +56,8 @@ typedef enum{
     //split_trans_tag
     ERROR_TAG_NO_A_TAG_WORD,                //解析不存在有效文本
     ERROR_TAG_NO_RIGHT_RIGHT_REC_BRACKET,   //解析无右侧括号
+    //split_text_tags
+    ERROR_TAG_NO_MATCH_KH,              //括号不匹配
     //upper
     ERROR_DIV_0,                        //除数为0
     ERROR_TAG_WRONG_SYNTAX,             //语法错误

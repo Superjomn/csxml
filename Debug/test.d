@@ -1,13 +1,13 @@
-test.d: ../test.cpp .././tree_struct/xml_tree.h \
- .././tree_struct/../type.h .././tree_struct/../tools/str.h \
- .././tree_struct/tag_tree_struct.h .././tree_search/tree_search.h
+test.d: ../test.cpp .././parse/xml_tree.h .././parse/../type.h \
+ .././parse/../tools/str.h .././parse/./tag_tree_struct.h \
+ .././search/tree_search.h
 
-.././tree_struct/xml_tree.h:
+.././parse/xml_tree.h:
 
-.././tree_struct/../type.h:
+.././parse/../type.h:
 
-.././tree_struct/../tools/str.h:
+.././parse/../tools/str.h:
 
-.././tree_struct/tag_tree_struct.h:
+.././parse/./tag_tree_struct.h:
 
-.././tree_search/tree_search.h:
+.././search/tree_search.h:

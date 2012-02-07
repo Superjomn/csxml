@@ -33,6 +33,17 @@
             ++++++++++++++++++++
                 核心结构层 
         +++++++++++++++++++++++++++++
+使用方法：
+    find()
+    类似于Jquery的tag查询方法
+    find("p#idname")                    查询 id=idname的p节点
+    find("p[attrname=attrvalue]")       查询 attrname=attrvalue 的p节点
+    嵌套查询：
+        标签方面可以支持任意数量的查询方法 
+        find("p#idname p[attrname=attrvalue attrname2=attrvalue2]") 
+    注意事项：
+        在#idname 及.classname中 '#'及'.'后面均不可有空格
+        在各标签匹配字符串间 只能有一个空格隔开 
 
 
 开发日志：
@@ -63,4 +74,7 @@
                 +尝试下 阅读 C++ 库源码 vector liste等很精致
                 -需要 对查找库进行测试
                 -暂时其他公共不再实现 测试完查找功能后 全力开始编写 Swin-SEO 争取在两周内拿出初步版本
+>2012-02-07 初步完成search
+            备忘录：
+                +指针变量注意初始化为NULL 在遍历时有用
     

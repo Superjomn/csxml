@@ -1,0 +1,13 @@
+digraph G{
+    text[shape=box style=dotted]
+    text->find
+    find->search
+    tags[shape=box]
+    search->match_attr->tags->find
+    match_attr->__hash_attr
+    find->split_text_tags
+    text->split_text_tags[label="split text to tag text"]
+    split_text_tags->split_tag_text[label="for each tag, spit and get tagname and attr"]
+    split_tag_text->split_text_attr[label="split attrtext and get attrs"]
+    {split_text_tags;split_text_attr;split_tag_text;}->tags;
+}
