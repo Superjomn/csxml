@@ -9,6 +9,7 @@ void show_tags(vector<TagNode*> tags);
 
 void show_tags(vector<TagNode*> tags)
 {
+    console("show founden tags:----------->>>>>>>>>>>>>>>>>>>");
     const unsigned int size=tags.size();
     for(int i=0;i<size;i++)
     {
@@ -72,7 +73,7 @@ string source=" <html>\
     split_tagtext(tt,tag);
     console("tg:at  " << tag.tagname <<"  "<<tag.attrtext);
     */
-    int test=6;
+    int test=8;
 
     switch(test)
     {
@@ -141,15 +142,16 @@ string source=" <html>\
             //测试search
             Tag_Tree tg= Tag_Tree();
             TagTreeType res;
-            tg.init(&source);
+            tg.init(source);
             tg.scan_trans_tree();
             console("root"<<tg.root);
             //搜索方法
             Tree_Search ts=Tree_Search();
             vector<TagNode*> tags;
             //div
-            ts.search(tg.root,"foot",tags);
+            ts.search(tg.root,"div",tags);
             console("tags size >"<<tags.size());
+            show_tags(tags);
             tags.clear();
             //#id
             vector<Attr> attrs;
@@ -165,7 +167,51 @@ string source=" <html>\
             show_tags(tags);
 
         }
+        break;
+        case 7:
+        {
+            Tag_Tree tg= Tag_Tree();
+            TagTreeType res;
+            tg.init(source);
+            tg.scan_trans_tree();
+            console("root"<<tg.root);
+
+            vector<TagNode*> tagnodes;
+            Tree_Search ts=Tree_Search();
+            console("成功解析源码");
+            ts.find("div#b1",tagnodes);
+            show_tags(tagnodes);
+            
+        }
+        break;
+        //match_tags测试
+        case 8:
+        {
+            Tag_Tree tg= Tag_Tree();
+            tg.init(source);
+            Tree_Search ts=Tree_Search();
+            Tag tag={"div","id=b1"};
+            vector<TagNode*> tags;
+            ts.match_tags(true,tg.root,tag,tags);
+
+        }
+        break;
+
+        case 9:
+        {
+            string tt="p#id";
+
+            console("text: >"<<tt);
+            Tag tag;
+            split_tagtext(tt,tag);
+            console("tg:at  " << tag.tagname <<"  "<<tag.attrtext);
+
+        }
+        break;
+
+
     }
+
 
     return 0;
 }

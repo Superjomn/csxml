@@ -53,7 +53,7 @@ private:
     Stack<TagNode *> tg_stack;
     //Stack<AttrNode> attr_stack;
     //处理的字符源字符 this->source将通过
-    string *source;
+    string source;
     //始终指向下次扫描的位置 类似于PC
     string::size_type step;
     //private function ---------------------
@@ -90,7 +90,7 @@ public:
      *将源码复制一份，并进行预处理（将无用字符替换为空格 并且将多余空格去除
      *处理完的字符可直接用作机器处理
      */
-    void init(string *source);
+    void init(string source);
     //为一个节点添加子节点
     void append_child(TagNode *fa, TagNode *child);
     //为一个节点添加属性

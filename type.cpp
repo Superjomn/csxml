@@ -149,5 +149,6 @@ bool TagTreeError(const string fun,const TagTreeType type)
             break;
         } 
     } 
+    return true;
 
 }

@@ -9,6 +9,7 @@
 //从s开始的下一个word 如.class 中的class
 bool next_word(const string &text,const string::size_type s,string::size_type &e,string &word)
 {
+    console("tools/str/next_word()*******************");
     int i=s;
     if(isspace(text[i]))
     {
@@ -22,29 +23,38 @@ bool next_word(const string &text,const string::size_type s,string::size_type &e
 //从当前位置向后取得一个word
 bool get_word(const string &text,const string::size_type s,string::size_type &e,string &word)
 {
+    console("tools/str/get_word()*******************");
     //开端为空格 必须能够保留位置
     if(isspace(text[s]))
+    {
+        console("首部为空格");
         return false;
+    }
 
     if(s==text.size())
+    {
+        console("传入为空 s=size");
         return false;
+    }
 
     console("not empty");
     string::size_type i=s;
     
-    while(isalpha(text[i]))
+    while(isalpha(text[i])||isdigit(text[i]))
     {
-        console("i++");
         i++;
     }
     e=i-1;
     console("i >"<<i);
     word=string(text,s,i-s);
+    console("get word >"<<word);
+    console("return trim(word)");
     return trim(word);
 }
 
 bool trans(string &text)
 {
+    console("tools/str/trans()**********************");
     //如果为空 则返回false 否则 返回 true
     if ((text).empty())
         return false;
@@ -79,6 +89,8 @@ bool trim(string &s)
 {
     //cout<<"trim()"<<endl; 
     //如果为空 则返回false 否则 返回 true
+    console("tools/str/trim()**********************");
+    console("get text >"<<s);
     string::size_type start=0,
                       end=s.size()-1;
     while(isspace(s[start]))
@@ -92,6 +104,7 @@ bool trim(string &s)
 //删除字符两侧引号 主要用作属性值的处理
 void rm_mark(string &text)
 {
+    console("tools/str/rm_mark()**********************");
     string::size_type start=0,
                        end=text.size()-1 ;
     //去除空格的影响

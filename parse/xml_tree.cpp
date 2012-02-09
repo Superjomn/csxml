@@ -29,8 +29,8 @@ template <typename T> inline bool is_odd(const T num)
 //private function ---------------------
 bool Tag_Tree::is_completed()
 {
-    //cout<<"is_completed   step:size"<<this->step<<" "<<(*this->source).size()<<endl;
-    return this->step >= (*this->source).size();
+    //cout<<"is_completed   step:size"<<this->step<<" "<<(this->source).size()<<endl;
+    return this->step >= (this->source).size();
 }
 
 TagNode* Tag_Tree::create_new_tagnode()
@@ -219,13 +219,13 @@ Tag_Tree::Tag_Tree()
 Tag_Tree::~Tag_Tree()
 {}
 
-void Tag_Tree::init(string *source)
+void Tag_Tree::init(string source)
 {
     //初始化 将内存中源码赋值到本类中
     this->step=0;
     this->source=source;
-    trans((*this->source) ) ;
-    cout<<"source is  "<<*this->source<<endl; 
+    trans((this->source) ) ;
+    cout<<"source is  "<<this->source<<endl; 
 }
 
 void Tag_Tree::append_child(TagNode *fa, TagNode *child)
@@ -365,16 +365,16 @@ TagTreeType Tag_Tree::add_attr(TagNode *tag,string &text)
 TagTreeType Tag_Tree::next_scope(string::size_type start)
 {
     //去除空格影响
-    while((*this->source)[start]==' ')
+    while((this->source)[start]==' ')
         start++;
     //到达文件尾
-    if (start==(*this->source).size())
+    if (start==(this->source).size())
     {
         //cout<<"next scope is NONE"<<endl;
         return NONE;
     }
     //开始判别
-    switch((*this->source)[start])
+    switch((this->source)[start])
     {
     case '<':
         //cout<<"next scope is TAGS"<<endl;
@@ -407,17 +407,17 @@ TagTreeType Tag_Tree::scan_scope(string::size_type step,string::size_type &end,s
      */
     //去除初始的空格
     ////cout<<"scan_scope"<<"取除去空格"<<endl;
-    while((*this->source)[start]==' ') 
+    while((this->source)[start]==' ') 
         start++;
     //标签开始  判断首字符
     //cout<<"switch source start"<<endl;
-    //cout<<"start "<<(*this->source)[start]<<endl;
-    switch((*this->source)[start]) 
+    //cout<<"start "<<(this->source)[start]<<endl;
+    switch((this->source)[start]) 
     {
         case '<':
             //标签类型判断
             //cout<<"< 号"<<endl;
-            ab = (*this->source).find_first_of('>',start);
+            ab = (this->source).find_first_of('>',start);
             //cout<<"ab:start  "<<ab<<" "<<start<<endl;   
             if(ab>start)
             {
@@ -433,9 +433,9 @@ TagTreeType Tag_Tree::scan_scope(string::size_type step,string::size_type &end,s
                     return ERROR_TAG_EMPTY_TAG;
                 //返回标签内容
                 
-                data=string((*this->source) ,start+1,ab-start-1);
+                data=string((this->source) ,start+1,ab-start-1);
                 //分辨标签种类
-                if ((*this->source)[start+1]=='/') 
+                if ((this->source)[start+1]=='/') 
                 {
                     //去除 / 影响
                     data=string(data,1,data.size()-1);
@@ -455,9 +455,9 @@ TagTreeType Tag_Tree::scan_scope(string::size_type step,string::size_type &end,s
         default:
             //字符串
             //cout<<"default 字符串"<<endl;
-            ap = (*this->source).find_first_of('<',start);
+            ap = (this->source).find_first_of('<',start);
             //之间默认隔着字符
-            data=string((*this->source) ,start,ap-start);
+            data=string((this->source) ,start,ap-start);
             //cout<<"scan_scope 字符串<<<<<<< "<<data<<endl;
             end=ap-1;
             //this->step始终指向下次扫描的起始位置

@@ -35,14 +35,14 @@ using namespace std;
  * 将传入的查询字符拆分为各个tag的字符
  * 如： "p#id div.class"    =>      p#id / div.class
  */
-TagTreeType split_text_tags(string &text,vector<string> &v_tags);
+TagTreeType split_text_tags(string text,vector<string> &v_tags);
 
 /*
  * 将单个查询tagtext拆分为  tagname; tagattr 并返回tag
  * 如： "p#idname"          tagname:p
  *                          tagattr:id=idname
  */
-TagTreeType split_tagtext(string &text,Tag &tag);
+TagTreeType split_tagtext(string text,Tag &tag);
 /*
  * 将单个tag的attrtext进行拆分为多个attr
  * 如： "class=classname id=idname"     =>  class:classname
@@ -59,6 +59,18 @@ private:
     Stack<TagNode*> tg_stack;
 
 public:
+
+    bool __detect_right_search(Tag tag, Search_Type &type);
+
+    bool __right_search(const TagNode *fnode,Tag tag,vector<TagNode*> &tags);
+
+    bool __tags_filter(vector<TagNode*> &tags,const Tag &tag);
+
+    //对tags检测 是否符合tag的要求
+    bool match_tags(bool init,const TagNode* root,Tag tg,vector<TagNode*> &tagnodes);
+
+public:
+    bool init(string source);
     //进行查找
     /*
     匹配规则由外在函数指针传入
@@ -70,18 +82,20 @@ public:
     //查询总入口
     //各种差错控制
     //查询主程序 负责对查取text作分析 调用适当的search程序
-    TagTreeType find(string &text);
+    bool find(const string &text, vector<TagNode*> tagnodes);
+
+
     //搜索主程序  在fa下搜索相应标签
     //根据标签名称进行查找
     //传入 Tag tag 将会自动调用相关函数进行拆分判断
-    TagTreeType search(TagNode *fnode,const string &tgname,vector<TagNode*> &tags);
+    bool search(const TagNode *fnode,const string &tgname,vector<TagNode*> &tags);
+
     //重载
     //根据 标签和属性进行查找  类似于 div[attrname=value]
-
-    TagTreeType search(const TagNode *fnode,const string &tgname,vector<Attr> &attrs,vector<TagNode*> &tags);
+    bool search(const TagNode *fnode,const string &tgname,vector<Attr> &attrs,vector<TagNode*> &tags);
 
     //#id 或 .id等无tag name的搜索
-    TagTreeType search(const TagNode *fnode,vector<Attr> &attrs,vector<TagNode*> &tags);
+    bool search(const TagNode *fnode,vector<Attr> &attrs,vector<TagNode*> &tags);
     //二级节点的查找
     //类似"div p"的搜索可以先搜索div 然后得到p
     //对一个节点进行属性判断
